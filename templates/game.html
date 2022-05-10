@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<head>
+    <title>Игра</title>
+    <style type="text/css">
+        container{
+            font-size: large;
+            height: 100%;
+        }
+        form{
+            text-align: left;
+        }
+        sidebar {
+            position: fixed;
+            background: #40E0D0;
+            float: left;
+            width: 13%;
+            height: 90%;
+            border: 2px solid black;
+            margin: 1%;
+        }
+        input{
+            margin-left: 3%;
+        }
+        .input{
+            margin: 20%;
+            height: 50px;
+            width: 90%;
+            margin-left: 5%;
+        }
+        kontent{
+            background: #40E0D0;
+            float: right;
+            width: 83%;
+            height: 90%;
+            border: 2px solid black;
+            margin: 1%;
+        }
+        .input_disable{
+            margin-left: auto;
+            margin-right: auto;
+            height: 50px;
+            width: 90%;
+            margin-top: 10%;
+            margin-left: 5%;
+            background: #40E0D0;
+        }
+        table{
+            margin: 2%;
+        }
+        th{
+            margin-left: 2%;
+            margin-top: 2%;
+            font-size: xx-large;
+        }
+        td{
+            font-size: x-large;
+            margin-left: 3%
+        }
+        img.avatar{
+            margin-top:2%;
+            margin-left: 2%;
+            width: 20%;
+            border: 2px solid black;
+        }
+        img.quiz{
+            margin-top:2%;
+            margin-left: 2%;
+            width: 40%;
+            border: 2px solid black;
+        }
+        img.pencil{
+            width: 5%;
+            border: 2px solid black;
+        }
+        h2{
+            margin-left: 3%;
+        }
+        select{
+            margin-left: 6%;
+        }
+    </style>
+</head>
+
+
+<sidebar>
+    <a href="/profile"><h1 class="input">Профиль</h1></a>
+    <a href="/my_quizes"><h1 class="input">Мои викторины</h1></a>
+    <a href="/play"><h1 class="input">Играть</h1></a>
+    <a href="/quit"><h1 class="input">Выход</h1></a>
+</sidebar>
+
+<kontent>
+    <form>
+        <table>
+            <tr>
+                <th><h2>{{question}}</h2></th>
+                <th><h4>Сейчас ходит игрок номер {{order_num}}</h4></th>
+            </tr>
+            <tr>
+                <th><h3>Варианты ответов:</h3></th>
+                <th><table>
+                    <tr>
+                        <th><input type="submit" name="but1" value="{{ans[0]}}" required ></th>
+                        <th><input type="submit" name="but2" value="{{ans[1]}}" required ></th>
+                    </tr>
+                    <tr>
+                        <th><input type="submit" name="but3" value="{{ans[2]}}" required ></th>
+                        <th><input type="submit" name="but4" value="{{ans[3]}}" required ></th>
+                    </tr>
+                </table></th>
+            </tr>
+        </table>
+    </form>
+</kontent>

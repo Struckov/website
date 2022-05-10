@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<head>
+    <title>Мои викторины</title>
+    <style type="text/css">
+        container{
+            font-size: large;
+            height: 100%;
+        }
+        form{
+            text-align: left;
+        }
+        sidebar {
+            position: fixed;
+            background: #40E0D0;
+            float: left;
+            width: 13%;
+            height: 90%;
+            border: 2px solid black;
+            margin: 1%;
+        }
+        .input_text{
+            margin: 1%;
+            margin-left: 5%;
+        }
+
+        .input_button{
+            margin: 20%;
+            height: 50px;
+            width: 90%;
+            margin-left: 5%;
+         }
+
+        kontent{
+            background: #40E0D0;
+            float: right;
+            width: 83%;
+            height: 90%;
+            border: 2px solid black;
+            margin: 1%;
+        }
+        plus.text{
+            position: absolute;
+            top: 40px;
+            left: 85%;
+            font-size: large;
+        }
+
+        plus.image{
+            position: absolute;
+            top: 40px;
+            left: 80%;
+        }
+
+        .input_disable{
+            margin-left: auto;
+            margin-right: auto;
+            height: 50px;
+            width: 90%;
+            margin-top: 10%;
+            margin-left: 5%;
+            background: #40E0D0;
+        }
+        table{
+            margin: 2%;
+        }
+        th{
+            margin-left: 2%;
+            margin-top: 2%;
+            font-size: xx-large;
+        }
+        td{
+            font-size: x-large;
+            margin-left: 3%
+        }
+        img.avatar{
+            margin-top:2%;
+            margin-left: 2%;
+            width: 20%;
+            border: 2px solid black;
+        }
+        img.quiz{
+            margin-top:2%;
+            margin-left: 2%;
+            width: 40%;
+            border: 2px solid black;
+        }
+        img.pencil{
+            width: 5%;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+
+<sidebar>
+    <a href="/profile"><h1 class="input_button">Профиль</h1></a>
+    <h1 class="input_button">Мои викторины</h1>
+    <a href="/play"><h1 class="input_button">Играть</h1></a>
+    <a href="/quit"><h1 class="input_button">Выход</h1></a>
+</sidebar>
+
+<plus class="text">Создать новую викторину</plus>
+<plus class="image"><a href="/create"><img src="{{plus_url}}"></a></plus>
+
+<kontent>
+    <table>
+        <tr>
+            <th valign="top">Викторины:</th>
+            <td>
+                <table align="right">
+                    {%for ind in range(len_of_quizes) %}
+                        <tr>
+                            <th align="right">{{urls_to_quizes[ind][1]}}</th>
+                            <th align="left">
+                                <img class="quiz" src="{{urls_to_quizes[ind][0]}}">
+
+                                <a href="{{urls_to_quizes[ind][2]}}"><img class="pencil" src="{{url_to_pencil}}"></a>
+                            </th>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </td>
+        </tr>
+    </table>
+</kontent>

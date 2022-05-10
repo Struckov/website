@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<head>
+    <title>Редактирование</title>
+    <style type="text/css">
+        container{
+            font-size: large;
+            height: 100%;
+        }
+        form{
+            text-align: left;
+        }
+        sidebar {
+            position: fixed;
+            background: #40E0D0;
+            float: left;
+            width: 13%;
+            height: 90%;
+            border: 2px solid black;
+            margin: 1%;
+        }
+        .input_text{
+            margin: 1%;
+            margin-left: 5%;
+        }
+        .input_button{
+            margin: 20%;
+            height: 50px;
+            width: 90%;
+            margin-left: 5%;
+         }
+        kontent{
+            background: #40E0D0;
+            float: right;
+            width: 83%;
+            height: %;
+            border: 2px solid black;
+            margin: 1%;
+        }
+        plus{
+            position: absolute;
+            top: 80px;
+            left: 85%;
+            width: 2%;
+            height: 2%;
+        }
+        .input_disable{
+            margin-left: auto;
+            margin-right: auto;
+            height: 50px;
+            width: 90%;
+            margin-top: 10%;
+            margin-left: 5%;
+            background: #40E0D0;
+        }
+        table{
+            margin: 2%;
+        }
+        th{
+            margin-left: 2%;
+            margin-top: 2%;
+            font-size: xx-large;
+        }
+        td{
+            font-size: x-large;
+            margin-left: 3%
+        }
+        img.avatar{
+            margin-top:2%;
+            margin-left: 2%;
+            width: 20%;
+            border: 2px solid black;
+        }
+        img.quiz{
+            margin-top:2%;
+            margin-left: 2%;
+            width: 40%;
+            border: 2px solid black;
+        }
+        img.pencil{
+            width: 5%;
+            border: 2px solid black;
+        }
+        h1{
+            margin-top: 2%;
+            margin-left: 3%;
+        }
+        h2{
+            margin-top: 2%;
+            margin-left: 3%;
+        }
+        p{
+            margin-top: 2%;
+            margin-left: 3%;
+        }
+        h5{
+            margin-left: 3%;
+        }
+
+
+    </style>
+</head>
+
+
+<sidebar>
+    <a href="/profile"><h1 class="input_button">Профиль</h1></a>
+    <a href="/my_quizes"><h1 class="input_button">Мои викторины</h1></a>
+    <a href="/play"><h1 class="input_button">Играть</h1></a>
+    <a href="/quit"><h1 class="input_button">Выход</h1></a>
+</sidebar>
+
+<kontent>
+    <h1>{{title}}</h1>
+    <h1>{{num_of_question}}</h1>
+    <form>
+        <table>
+            <tr><input class="input_text" type="text" name="question" placeholder="{{question}}" required></tr>
+            <tr>
+                <th><input class="input_text" type="text" name="ans1" placeholder="{{ans1}}" required></th>
+                <th><input class="input_text" type="text" name="ans2" placeholder="{{ans2}}" required></th>
+                <th><input class="input_text" type="text" name="ans3" placeholder="{{ans3}}" required></th>
+            </tr>
+            <tr>
+                <th><input class="input_text" type="text" name="True_ans" placeholder="{{True_ans}}" required></th>
+            </tr>
+            <tr>
+                <th><input class="input_text" type="submit" value="Сохранить" required></th>
+            </tr>
+        </table>
+    </form>
+    <form>
+        <table>
+            <tr>
+                <th><input class="input_text" type="submit" name="prev" value="Прошлый вопрос" required></th>
+                <th><input class="input_text" type="submit" name="next" value="Следующий вопрос" required></th>
+            </tr>
+        </table>
+    </form>
+</kontent>

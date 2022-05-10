@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Регистрация</title>
+    <style type="text/css">
+        body{
+            text-align: center;
+            width: 20%;
+            margin-top:  75px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: x-large;
+            border: 5px solid aqua;
+            padding: 20px;
+        }
+
+        head_text{
+            font-size: xx-large;
+            color: red;
+        }
+
+        .input{
+            height: 50px;
+            width: 200px;
+        }
+
+        .button{
+            height: 30px;
+            width: 200px;
+        }
+
+        form{
+            text-align: left;
+        }
+
+    </style>
+</head>
+
+<body>
+    <head_text>
+        <p>Регистрация</p>
+    </head_text>
+    <error>
+        <p>Ошибка</p>
+        <p>Этот логин занят, или вы ввели не правильно повторный пароль.</p>
+    </error>
+    <form method="update">
+            <label>Введите Ваш Логин</label>
+            <p><input class="input" type="text" name="login" placeholder="Логин" required ></p>
+            <label>Введите Ваш пароль</label>
+            <p><input class="input" type="password" name="pass1" placeholder="Пароль" required ></p>
+            <label>Подтвердите Ваш пароль</label>
+            <p><input class="input" type="password" name="pass2" placeholder="Пароль" required ></p>
+
+            <input class="button" type="submit" required value="Закончить Регистрацию">
+
+    </form>
+</body>
+
+</html>
